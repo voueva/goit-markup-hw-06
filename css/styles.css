@@ -1050,6 +1050,14 @@ header {
         height: 100%;
         align-items: center;
     }
+
+    .modal {
+        width: 288px;
+    }
+
+    .modal-text {
+        width: 240px;
+    }
 }
 
 
