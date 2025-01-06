@@ -55,6 +55,7 @@ header {
 }
 
 .container {
+    max-width: 1158px; 
     padding: 0 16px;
     margin: 0 auto;
 }
@@ -68,7 +69,6 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 16px;
 }
 
 .contact-list {
@@ -102,9 +102,10 @@ header {
     color: #2E2F42;   
     font-weight: 500;
     padding-top: 24px;
+    padding-bottom: 24px;
     font-size: 16px;
-    line-height: 1,5px;
-    letter-spacing: 0,02em;
+    line-height: 150%;
+    letter-spacing: 0.02em;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -166,7 +167,10 @@ header {
 
     color: white;
     height: 600px;
+}
 
+.welcome-section .container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,6 +179,7 @@ header {
 }
 
 .welcome-title {
+    font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
@@ -209,7 +214,10 @@ header {
 
 /* section 2 */
 .slogan-section {
-    padding: 120px 0;
+    padding: 100px 0;
+}
+
+.slogan-section .container {
     display: flex;
     justify-content: center;
 }
@@ -244,20 +252,20 @@ header {
 
 .slogan-list-column {
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 
 .slogan-item {
     /* flex-basis: calc((100% - 72px) / 4); */
-    padding: 0 16px;
-    max-width: 320px;
+    max-width: 264px;
 }
 
-.slogan-item-container {
+.slogan-item-icon-container {
     border: 1px solid #8E8F99;
     border-radius: 4px;
-    /* width: 264px; */
-    /* height: 112px; */
+    width: 264px;
+    height: 112px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,13 +276,22 @@ header {
 .slogan-item-title {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 120%;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
+.slogan-item-description {
+    font-weight: 400;
+    font-size: 16px;
+
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
+
 /* section 3 */
+
 .team-section {
     padding: 120px 0;
     background-color: #F4F4FD;
@@ -964,10 +981,11 @@ header {
     color: var(--ocean);
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1400px) {
     .footer-container {
         flex-direction: column;
         gap: 72px;
+        max-width: 494px;
     }
 
     .footer-section.first {
@@ -985,11 +1003,7 @@ header {
         height: 432px;
     }
 
-    .welcome-title {
-        font-size: 32px; /* TODO */
-    }
-
-    .slogan-item-container {
+    .slogan-item-icon-container {
         display: none;
     }
 
@@ -1004,11 +1018,42 @@ header {
     .team-list {
         flex-direction: column;
     }
+
+    .slogan-item {
+        max-width: 356px;
+    }
+
+    .slogan-item-title {
+        font-weight: 700;
+        font-size: 36px;
+    
+        line-height: 111%;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+    }
+    
+    .slogan-item-description {
+        font-weight: 500;
+        font-size: 16px;
+    
+        line-height: 150%;
+        letter-spacing: 0.02em;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .footer {
         padding: 100px 16px;
+    }
+
+    .footer-description {
+        max-width: 288px;
+    }
+
+    .footer-section.first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .footer-container {
@@ -1046,9 +1091,39 @@ header {
         max-width: 100%;
         align-items: center;
     }
+
+    .slogan-item {
+        max-width: 264px;
+    }
+
+    .team-section {
+        padding: 100px 0;
+    }
+
+    .team-title {
+        margin-bottom: 185px;
+    }
+
+    .team-list,
+    .team-list-column {
+        gap: 68px;
+    }
+
+    .portfolio {
+        padding: 100px 0;
+    }
 }
 
 @media screen and (max-width: 580px) {
+
+    .page-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px;
+    }
+
     .menu-list, 
     .contact {
         display: none;  
@@ -1063,7 +1138,8 @@ header {
     }
 
     .welcome-title {
-        font-size: 32px; /* TODO */
+        font-size: 36px;
+        line-height: 1.11;
     }
 
     .slogan-item-title {
@@ -1084,5 +1160,10 @@ header {
 
     .modal-text {
         width: 240px;
+    }
+
+    .slogan-list,
+    .slogan-list-column {
+        gap: 72px;
     }
 }
